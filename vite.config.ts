@@ -1,10 +1,9 @@
 import path from 'path';
-import react from '@vitejs/plugin-react';
+import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
-import vitePluginRequire from 'vite-plugin-require';
 
 export default defineConfig({
-	plugins: [react(), vitePluginRequire()],
+	plugins: [react()],
 	resolve: {
 		alias: {
 			'@': path.resolve(__dirname, './src'),

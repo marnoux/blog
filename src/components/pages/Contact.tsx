@@ -67,10 +67,7 @@ const Contact = () => {
 									placeholder='Message'
 								/>
 
-								<button
-									type='submit'
-									className='bg-primary py-2 px-3 rounded-md text-secondary font-bold text-lg'
-								>
+								<button type='submit' className='bg-primary py-2 px-3 rounded-md font-bold text-lg'>
 									Submit
 								</button>
 							</form>

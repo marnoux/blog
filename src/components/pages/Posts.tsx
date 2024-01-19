@@ -45,7 +45,7 @@ const Posts = ({ isFeatured }: { isFeatured: boolean }) => {
 										<img
 											alt={`Image for ${id}`}
 											src={`${url}/api/files/${collectionId}/${id}/${image}`}
-											className='w-full h-full object-cover'
+											className='w-full h-full object-scale-down'
 										/>
 									</CardContent>
 									<CardFooter className='text-lg'>
