@@ -19,7 +19,7 @@ const Posts = ({ isFeatured }: { isFeatured: boolean }) => {
 
 	return (
 		<div className='bg-primary flex items-center flex-col gap-12 p-0 text-5xl h-screen'>
-			<h1 className='text-7xl text-primary-foreground mt-8'>{`${
+			<h1 className='lg:text-7xl text-primary-foreground mt-8'>{`${
 				isFeatured ? 'Featured' : 'All'
 			} Posts`}</h1>
 			<div className='grid lg:grid-cols-3 gap-4 sm:grid-cols-2 px-8 mb-8'>

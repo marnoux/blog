@@ -19,7 +19,7 @@ const Contact = () => {
 
 	return (
 		<div className='flex justify-center items-center mt-12'>
-			<Card className='bg-background border-primary m-0 p-5 max-w-96'>
+			<Card className='bg-background border-primary max-w-[350px] p-5'>
 				<CardContent>
 					<div className='flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center align-center'>
 						<div className='flex flex-col space-y-5 md:space-y-25'>
@@ -27,19 +27,19 @@ const Contact = () => {
 								<div className='flex items-center space-x-5 justify-center'>
 									<PhoneIcon className='text-primary h-7 w-7 animate-pulse' />
 
-									<p className='text-2xl'>+31 61 686 1777</p>
+									<p className='md:text-lg lg:text-xl'>+31 61 686 1777</p>
 								</div>
 
 								<div className='flex items-center space-x-5 justify-center'>
 									<EnvelopeIcon className='text-primary h-7 w-7 animate-pulse' />
 
-									<p className='text-2xl'>marnouxmanser@gmail.com</p>
+									<p className='md:text-lg lg:text-xl'>marnouxmanser@gmail.com</p>
 								</div>
 
 								<div className='flex items-center space-x-5 justify-center'>
 									<MapPinIcon className='text-primary h-7 w-7 animate-pulse' />
 
-									<p className='text-2xl'>Amsterdam, Netherlands</p>
+									<p className='md:text-lg lg:text-xl'>Apeldoorn, Netherlands</p>
 								</div>
 							</div>
 
@@ -67,7 +67,11 @@ const Contact = () => {
 									placeholder='Message'
 								/>
 
-								<button type='submit' className='bg-primary py-2 px-3 rounded-md font-bold text-lg'>
+								<button
+									type='submit'
+									className='bg-primary text-primary-foreground
+									py-2 px-3 rounded-md font-bold text-lg'
+								>
 									Submit
 								</button>
 							</form>

@@ -1,16 +1,16 @@
 import { Link } from 'react-router-dom';
 
 const Footer = () => (
-	<footer className='fixed bottom-0 left-0 z-20 w-full p-4 bg-secondary border-t border-secondary shadow md:flex md:items-center md:justify-between md:p-4'>
-		<span>
+	<footer className='fixed bottom-0 left-0 z-20 bg-secondary border-t border-secondary shadow md:flex md:items-center md:justify-between w-screen flex items-center justify-between p-5'>
+		<span className='flex items-center'>
 			© {new Date().getFullYear()}
-			{` `}
+			{' by'}&nbsp;
 			<a href='https://marnoux.dev/' className='hover:underline' target='_blank'>
-				by {'<Marnoux />'}
+				{' <Marnoux />'}
 			</a>
 		</span>
-		<ul className='flex flex-wrap items-center mt-3 text-sm font-medium  sm:mt-0'>
-			<li>
+		<ul className='flex items-center text-sm font-medium'>
+			<li className='flex justify-center items-center'>
 				<a
 					href='https://www.marnoux.dev/#about'
 					target='_blank'
@@ -19,11 +19,7 @@ const Footer = () => (
 					About
 				</a>
 			</li>
-			<Link to='/contact'>
-				<a href='#' className='hover:underline'>
-					Contact
-				</a>
-			</Link>
+			<Link to='/contact'>Contact</Link>
 		</ul>
 	</footer>
 );
