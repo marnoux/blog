@@ -8,7 +8,7 @@ import Footer from './components/layout/Footer';
 
 const App = () => {
 	return (
-		<div className='overflow-x-hidden h-screen'>
+		<div className={`overflow-x-hidden h-screen`}>
 			<Navbar />
 			<Routes>
 				<Route path='/' element={<Home />} />

@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 import { isEmpty } from 'lodash';
 
 const Posts = ({ isFeatured }: { isFeatured: boolean }) => {
-	const { data: posts } = usePosts();
+	const { data: posts } = usePosts( );
 
 	if (isEmpty(posts?.items)) return;
 

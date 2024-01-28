@@ -7,7 +7,7 @@ const Hero = () => {
 				className='h-64 w-64 rounded-full object-cover border border-primary animate-in'
 			/>
 
-			<h2 className='text-base px-5'>I blog about web development (sometimes)</h2>
+			<h2 className='text-base px-5'>I develop the web and write about it (sometimes)</h2>
 		</div>
 	);
 };

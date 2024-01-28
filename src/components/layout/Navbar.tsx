@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ModeToggle } from '../ui/mode-toggle';
 import { SocialIcon } from 'react-social-icons';
-import { HomeIcon } from 'lucide-react';
+import { GlobeIcon, HomeIcon, PhoneIcon } from 'lucide-react';
 import {
 	Drawer,
 	DrawerClose,
@@ -22,6 +22,7 @@ import {
 	NavigationMenuLink,
 } from '../ui/navigation-menu';
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
+import { DocumentIcon } from '@heroicons/react/24/solid';
 
 const Navbar = () => {
 	const socialLinks = [
@@ -29,6 +30,7 @@ const Navbar = () => {
 		'https://github.com/marnoux',
 		'https://instagram.com/marnouxm',
 		'https://twitter.com/MarnouxM',
+		'https://marnoux.dev',
 	];
 
 	return (
@@ -55,14 +57,44 @@ const Navbar = () => {
 									<DrawerTitle>Marnoux's blog</DrawerTitle>
 								</DrawerHeader>
 
-								<Link to='/' className='flex items-center p-0 m-0'>
-									<DrawerClose>
-										<span className='flex items-center gap-3'>
-											<HomeIcon className='h-8 w-8' />
-											Home
-										</span>
-									</DrawerClose>
-								</Link>
+								<div className='flex flex-col gap-5 mt-5'>
+									<Link to='/' className='flex items-center p-0 m-0'>
+										<DrawerClose>
+											<span className='flex items-center gap-3'>
+												<HomeIcon className='h-8 w-8' />
+												Home
+											</span>
+										</DrawerClose>
+									</Link>
+									<Link to='/contact' className='flex items-center p-0 m-0'>
+										<DrawerClose>
+											<span className='flex items-center gap-3'>
+												<PhoneIcon className='h-8 w-8' />
+												Contact
+											</span>
+										</DrawerClose>
+									</Link>
+									<Link to='/posts' className='flex items-center p-0 m-0'>
+										<DrawerClose>
+											<span className='flex items-center gap-3'>
+												<DocumentIcon className='h-8 w-8' />
+												Posts
+											</span>
+										</DrawerClose>
+									</Link>
+									<a
+										href='https://marnoux.dev'
+										target='_blank'
+										className='flex items-center p-0 m-0'
+									>
+										<DrawerClose>
+											<span className='flex items-center gap-3'>
+												<GlobeIcon className='h-8 w-8' />
+												Website
+											</span>
+										</DrawerClose>
+									</a>
+								</div>
 								<DrawerFooter>
 									<DrawerClose>
 										<Button variant='outline'>Close</Button>
@@ -75,7 +107,7 @@ const Navbar = () => {
 						{socialLinks.map((link) => (
 							<NavigationMenuLink key={link}>
 								<SocialIcon
-									className='fg-secondary accent-secondary'
+									className='fill-primary'
 									url={link}
 									bgColor='none'
 									fgColor='bg-secondary'
