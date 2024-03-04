@@ -2,14 +2,14 @@ import Markdown from 'react-markdown';
 
 const StyledMarkdown = ({ content }: { content: string }) => {
 	return (
-		<div className='flex flex-col items-center xs:px-12'>
-			<div className='flex flex-col justify-center max-w-[1280px] gap-10 p-12 text-wrap'>
+		<div className='flex flex-col items-center px-12 xs:px-12'>
+			<div className='flex flex-col justify-center w-full max-w-[800px] gap-10 text-wrap'>
 				<Markdown
 					children={content}
 					components={{
-						h1: ({ ...props }) => <h1 className='text-7xl' {...props} />,
-						h2: ({ ...props }) => <h2 className='text-6xl italic' {...props} />,
-						h3: ({ ...props }) => <h3 className='text-left text-4xl' {...props} />,
+						h1: ({ ...props }) => <h1 className='text-3xl sm:text-7xl' {...props} />,
+						h2: ({ ...props }) => <h2 className='text-3xl italic' {...props} />,
+						h3: ({ ...props }) => <h3 className='text-left text-2xl' {...props} />,
 						h4: ({ ...props }) => <h4 className='text-2xl' {...props} />,
 						h5: ({ ...props }) => <h5 className='text-xl' {...props} />,
 						h6: ({ ...props }) => <h6 className='text-lg' {...props} />,
